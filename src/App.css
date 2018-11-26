@@ -1,0 +1,102 @@
+.app {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: column;
+}
+
+.sudoku {
+  display: flex;
+}
+
+.box-row {
+  display: block;
+  flex-direction: row;
+  /*display: inline-flex;*/
+}
+/*
+.box-row::after {
+  width: 100%;
+}
+*/
+.box {
+  border: 2px solid #000;
+  /*min-width: 110px;
+  min-height: 110px;*/
+}
+
+.cell-row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.cell {
+  background: #fff;
+  border: 1px solid #999;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0;
+  text-align: center;
+  float: left;
+  min-height: 34px;
+  min-width: 34px;
+  width: 33%;
+  height: 0;
+  flex-basis: calc(100% / 9);
+  flex: 1 1 auto;
+}
+
+.cell:focus {
+  border: 2px solid #FF0000;
+}
+
+.cell:hover {
+  background: #A1A1A1;
+}
+
+.cell.static, .cell.static:hover {
+  background: #CECECE;
+}
+
+.cell.static:focus {
+  border: 1px solid #999;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  max-height: 10vh;
+  max-width: 10vw;
+}
+
+.control-button {
+  border: 1px solid #999;
+  font-size: 24px;
+  font-weight: bold;
+  min-height: 34px;
+  min-width: 76px;
+  margin-right: 20px;
+  margin-left: 50%;
+}
+
+.control-button:hover, .number-button:hover {
+  background: #A1A1A1;
+}
+
+.modal {
+  top: 10px;
+}
+
+.number-button {
+  /*position: relative;*/
+  border: 1px solid #999;
+  min-height: 36px;
+  min-width: 36px;
+  font-size: 24px;
+  background: #fff;
+  flex-direction: row;
+  /*z-index: 20;*/
+}
